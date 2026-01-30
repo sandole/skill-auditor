@@ -1,0 +1,41 @@
+{
+  "name": "skill-auditor",
+  "version": "0.2.1",
+  "description": "Security scanner for Clawdbot skills - detects malicious patterns before installation",
+  "author": "JarvisYVR",
+  "license": "MIT",
+  "homepage": "https://github.com/JarvisYVR/skill-auditor",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JarvisYVR/skill-auditor"
+  },
+  "keywords": [
+    "security",
+    "audit",
+    "scanner",
+    "malware",
+    "skills",
+    "safety"
+  ],
+  "categories": ["security", "developer-tools"],
+  "clawdbot": {
+    "minVersion": "0.8.0"
+  },
+  "install": {
+    "scripts": ["install.sh"],
+    "postInstall": "echo '✅ skill-auditor installed. Run: skill-audit <file.md>'"
+  },
+  "files": [
+    "SKILL.md",
+    "skill.json",
+    "audit.sh",
+    "sandbox_audit.sh",
+    "install.sh",
+    "rules/malicious_skill.yar",
+    "sandbox/Dockerfile"
+  ],
+  "bin": {
+    "skill-audit": "audit.sh",
+    "skill-audit-full": "full_audit.sh"
+  }
+}
